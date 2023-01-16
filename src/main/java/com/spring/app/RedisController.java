@@ -23,11 +23,11 @@ public class RedisController {
 	}
 	
 	
-	@GetMapping("/cancel")
+	@GetMapping("/cleancache")
 	@CacheEvict("hello")
 	public String cancel() {		
 		System.out.println("Clean cache");
-		return "Cache cancelled";
+		return "Clean cache";
 	}
 	
 }
